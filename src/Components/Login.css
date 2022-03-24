@@ -1,0 +1,29 @@
+.login-background {
+    position: absolute;
+    width: 1590.89px;
+    height: 994.12px;
+    left: 1.11px;
+    top: 0px;
+    background: linear-gradient(180deg, #01AEEF 0%, #0093E9 100%);
+    border-radius: 5px;
+}
+
+.login-logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 730px;
+    top: 86px;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+}
+
+.login-logo img {
+    /* position: absolute; */
+    width: 75px;
+    height: 70px;
+    left: 745px;
+    top: 97px;
+    margin-top: 15px;
+}
