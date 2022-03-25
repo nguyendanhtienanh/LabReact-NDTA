@@ -1,29 +1,161 @@
-.login-background {
-    position: absolute;
-    width: 1590.89px;
-    height: 994.12px;
-    left: 1.11px;
-    top: 0px;
+.background {
+    height: 100vh;
     background: linear-gradient(180deg, #01AEEF 0%, #0093E9 100%);
-    border-radius: 5px;
 }
 
-.login-logo {
-    position: absolute;
+.logo {
+    position :fixed;
     width: 100px;
     height: 100px;
     left: 730px;
     top: 86px;
+   
     background: #FFFFFF;
     box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.2);
     border-radius: 100px;
 }
 
-.login-logo img {
-    /* position: absolute; */
-    width: 75px;
-    height: 70px;
+.logo >img {
+    position: fixed;
+    width: 73px;
+    height: 72px;
     left: 745px;
     top: 97px;
-    margin-top: 15px;
+    border-radius: 100px;
+}
+
+.username {
+    position: relative;
+    width: 477.7px;
+    height: 64.5px;
+    left: 554.89px;
+    top: 236px;
+}
+
+.username Input {
+    width: 477.7px;
+    height: 64.5px;
+    padding-left: 57px;
+}
+
+.username img {
+    position: absolute;
+    left: 4%;
+    right: 62.15%;
+    top: 32.04%;
+    bottom: 71.32%;
+    height: 25px;
+    width: 25px;
+}
+
+.password {
+    position: absolute;
+    left: 554.89px;
+    right: 34.78%;
+    top: 352px;
+    bottom: 57.31%;
+    width: 477.7px;
+    height: 64.5px;
+}
+
+.password .pass-logo Input {
+    width: 477.7px;
+    height: 64.5px;
+    padding-left: 57px;
+}
+
+.password .pass-logo >img {
+    position: absolute;
+    left: 4%;
+    top: 32.04%;
+    bottom: 71.32%;
+    height: 25px;
+    width: 25px;
+}
+
+.password >img {
+    position: absolute;
+    right: 4%;
+    top: 32.04%;
+    bottom: 71.32%;
+    height: 25px;
+    width: 25px;
+}
+
+.password .invisible img {
+    height: 25px;
+    width: 25px;
+}
+
+.remember {
+    position: absolute;
+    left: 563px;
+    top: 492px;
+    display: flex;
+}
+
+.remember p {
+    margin-left: 10.42px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+    }
+
+.forget {
+    position: absolute;
+    left: 917px;
+    top: 492px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.log Button {
+    position: absolute;
+    width: 434px;
+    height: 48px;
+    left: 581px;
+    top: 550px;
+
+    background: linear-gradient(180deg, #01AEEF 0%, #0093E9 100%);
+    border-radius: 5px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+}
+
+.info p {
+    position: absolute;
+    width: 549px;
+    height: 18px;
+    left: 524px;
+    top: 674px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
+.license p {
+    position: absolute;
+    width: 549px;
+    height: 18px;
+    left: 524px;
+    top: 696px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0.6;
 }
