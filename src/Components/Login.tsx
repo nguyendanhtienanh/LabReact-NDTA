@@ -7,6 +7,7 @@ import imguser from '../img/logo-user.png';
 import imgpassword from '../img/logo-password.png';
 import imginvisible from '../img/logo-invisible.png';
 import {Button} from 'reactstrap';
+import { Link } from "react-router-dom";
 
 class Login extends Component {
     render() {
@@ -45,9 +46,13 @@ class Login extends Component {
                         <p>Bạn quên mật khẩu?</p>
                     </div>
                     <div className="log">
-                        <Button>
-                            Đăng nhập
-                        </Button>
+                        <nav>
+                            <Link to="/Home">
+                                <Button>
+                                    Đăng nhập
+                                </Button>
+                            </Link>
+                        </nav>
                     </div>
                     <div className="info">
                         <p>Nếu bạn có thắc mắc hay cần giải đáp, vui lòng liên hệ số điện thoại: 19001000</p>
