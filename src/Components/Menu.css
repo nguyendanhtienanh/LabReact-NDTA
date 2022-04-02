@@ -1,0 +1,80 @@
+/* menu */
+.Menu {
+    border: 1px solid black;
+    width: 16%;
+    height: 78vh;
+}
+
+.header-menu {
+    width: 100%;
+    display: flex;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.header-menu .me-auto {
+    margin-left: 10px;
+}
+
+.content-menu {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    align-items: center;
+    color: #000000;
+    margin-top: 10px;
+    width: 100%;
+    border-top: 1px solid black;
+}
+
+.content-menu .shop {
+    display: flex;
+    padding: 10px 0px 10px 10px;
+}
+
+.content-menu .cart {
+    display: flex;
+    padding: 10px 0px 10px 10px;
+}
+
+.content-menu .user {
+    display: flex;
+    padding: 10px 0px 10px 10px;
+}
+
+.content-menu .shop >img {
+    width: 40px;
+    height: 40px;
+}
+
+.content-menu .user >img {
+    width: 40px;
+    height: 40px;
+}
+
+.content-menu .cart >img {
+    width: 40px;
+    height: 40px;
+}
+
+.content-menu .shop >a {
+    margin-left: 10px;
+    
+}
+
+.content-menu .cart >a {
+    margin-left: 10px;
+}
+
+.content-menu .user >a {
+    margin-left: 10px;
+}
+

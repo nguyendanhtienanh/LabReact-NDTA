@@ -1,14 +1,17 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import './Home.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button} from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Row, Col, Navbar, Collapse, Nav, NavItem, NavLink, NavbarToggler, NavbarBrand } from 'reactstrap'
+import TopHome from "./TopHome";
+import Menu from "./Menu";
+
 import { Link } from "react-router-dom";
  
-class Home extends Component {
-    render() {
+const Home: React.FC = () => {
         return (
             <div className="Home">
-                <p>Home</p>
+                <TopHome></TopHome>
+                <Menu></Menu>
                 <nav>
                     <Link to="/">
                         Login
@@ -16,7 +19,6 @@ class Home extends Component {
                 </nav>
             </div>
         );
-    }
 }
 
 export default Home;
