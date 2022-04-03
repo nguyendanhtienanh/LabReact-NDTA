@@ -1,22 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import './Home.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Row, Col, Navbar, Collapse, Nav, NavItem, NavLink, NavbarToggler, NavbarBrand } from 'reactstrap'
 import TopHome from "./TopHome";
 import Menu from "./Menu";
+import { Routes, Route} from "react-router-dom";
+import User from "../Page/User";
+import Shop from "../Page/Shop";
+import Cart from "../Page/Cart";
 
-import { Link } from "react-router-dom";
- 
 const Home: React.FC = () => {
         return (
             <div className="Home">
                 <TopHome></TopHome>
-                <Menu></Menu>
-                <nav>
-                    <Link to="/">
-                        Login
-                    </Link>
-                </nav>
+                <div className="home-1">
+                    <Menu></Menu>
+                    <Routes>
+                        <Route path="Shop" element={<Shop />} />
+                        <Route path="Cart" element={<Cart />} />
+                        <Route path="User" element={<User />} />
+                    </Routes>
+                </div>
             </div>
         );
 }

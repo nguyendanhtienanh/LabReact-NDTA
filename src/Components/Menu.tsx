@@ -4,10 +4,11 @@ import { Navbar, Collapse, Nav, NavItem, NavLink, NavbarToggler, NavbarBrand,  }
 import logoshop from '../img/logoshop.png';
 import logocart from '../img/logocart.png';
 import logouser from '../img/logouser.png';
+import { Link } from "react-router-dom";
 
 const Menu: React.FC = () => {
     
-    const [sidebar, setSidebar] = useState(false);
+    const [sidebar, setSidebar] = useState(true);
     const showSidebar = () => setSidebar(!sidebar);
     return (
         <div className="Menu">
@@ -27,32 +28,36 @@ const Menu: React.FC = () => {
                             onClick={showSidebar}
                         />
                     </div>
-                  
                     <div className="content-menu">
                         <Collapse isOpen={sidebar} navbar>
                             <Nav navbar>
                                 <NavItem className="shop">
                                     <img src={logoshop}></img>
-                                    <NavLink href="/components/">
-                                        Shop
+                                    <NavLink>
+                                        <Link to='/shop/'>
+                                            Shop
+                                        </Link>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem className="cart">
                                     <img src={logocart}></img>
-                                    <NavLink href="/components/">
-                                        Cart
+                                    <NavLink>
+                                        <Link to='/cart/'>
+                                            Cart
+                                        </Link>
                                     </NavLink>
                                 </NavItem>
                                 <NavItem className="user">
                                     <img src={logouser}></img>
-                                    <NavLink href="/components/">
-                                        My Profile
+                                    <NavLink>
+                                        <Link to='/user/'>
+                                            My Profile
+                                        </Link>
                                     </NavLink>
                                 </NavItem>
                             </Nav>
                         </Collapse>
-                    </div>
-                    
+                    </div>    
                 </Navbar>
             </div>
         </div>

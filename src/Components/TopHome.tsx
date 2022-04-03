@@ -14,7 +14,7 @@ const TopHome: React.FC = () => {
                     <Col sm={10} className="home_text">
                         <p>Mobile Shopping</p>
                     </Col>
-                    <Col sm={0} className="logo_user">
+                    <Col sm={1} className="logo_user">
                         <img src={logouser}></img>
                     </Col>
                 </Row>

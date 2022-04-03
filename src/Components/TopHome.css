@@ -26,8 +26,13 @@
 
 }
 
+.logo_user {
+    margin-left: 12%;
+}
+
 .logo_user >img {
     margin-left: 75%;
-
+    width: 69px;
+    height: 69px;
     margin-top: 24px;
 }
