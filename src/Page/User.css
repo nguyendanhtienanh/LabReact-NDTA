@@ -1,0 +1,100 @@
+.body-user {
+    display: flex;
+}
+
+.content-user {
+    width: 100%;
+}
+
+.header-user {
+    height: 11%;
+}
+
+.header-user >p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    align-items: center;
+    color: #000000;
+    padding-left: 3%;
+    padding-top: 0.3%;
+}
+
+.info {
+    height: 89%;
+}
+
+.info-basic {
+    height: 40%;
+    display: flex;
+}
+
+.avatar-user {
+    width: 30%;
+}
+
+.avatar-user >img {
+    width: 136px;
+    height: 140px;
+    margin-left: 35%;
+}
+
+.basic {
+    width: 70%;
+}
+
+.name {
+    height: 50%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    align-items: center;
+    color: #000000;
+}
+
+.email {
+    height: 50%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    align-items: center;
+    color: #000000;
+}
+
+.info-details {
+    height: 50%;
+}
+
+.table-details {
+    width: 68%;
+    margin-left: 10%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.calendar >img {
+    width: 30px;
+    height: 27px;
+    margin-left: 1%;
+    margin-bottom: 1.5%;
+}
+
+.more >img {
+    width: 25px;
+    height: 27px;
+    margin-left: 3%;
+    margin-bottom: 1.5%;
+}
+
+.td >text {
+    text-decoration: underline;
+}

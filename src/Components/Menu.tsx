@@ -34,7 +34,7 @@ const Menu: React.FC = () => {
                                 <NavItem className="shop">
                                     <img src={logoshop}></img>
                                     <NavLink>
-                                        <Link to='/shop/'>
+                                        <Link to='/shop/' className="hover">
                                             Shop
                                         </Link>
                                     </NavLink>
@@ -42,7 +42,7 @@ const Menu: React.FC = () => {
                                 <NavItem className="cart">
                                     <img src={logocart}></img>
                                     <NavLink>
-                                        <Link to='/cart/'>
+                                        <Link to='/cart/' className="hover">
                                             Cart
                                         </Link>
                                     </NavLink>
@@ -50,7 +50,7 @@ const Menu: React.FC = () => {
                                 <NavItem className="user">
                                     <img src={logouser}></img>
                                     <NavLink>
-                                        <Link to='/user/'>
+                                        <Link to='/user/' className="hover">
                                             My Profile
                                         </Link>
                                     </NavLink>

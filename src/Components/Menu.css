@@ -5,6 +5,7 @@
     height: 78vh;
 }
 
+
 .header-menu {
     width: 100%;
     display: flex;
@@ -20,6 +21,14 @@
 
 .header-menu .me-auto {
     margin-left: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #000000;
 }
 
 .content-menu {
@@ -78,3 +87,28 @@
     margin-left: 10px;
 }
 
+.hover {
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.hover >img {
+    width: 40px;
+    height: 40px;
+}
+
+.shop:hover {
+    border: 2px solid #0FEAF8;
+}
+.cart:hover {
+    border: 2px solid #0FEAF8;
+}
+.user:hover {
+    border: 2px solid #0FEAF8;
+}

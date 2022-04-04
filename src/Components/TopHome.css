@@ -30,7 +30,7 @@
     margin-left: 12%;
 }
 
-.logo_user >img {
+.logo_user .fix-logouser >img {
     margin-left: 75%;
     width: 69px;
     height: 69px;
