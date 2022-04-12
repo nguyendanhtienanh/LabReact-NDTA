@@ -31,7 +31,7 @@ const Menu: React.FC = () => {
                     <div className="content-menu">
                         <Collapse isOpen={sidebar} navbar>
                             <Nav navbar>
-                                <NavItem className="shop">
+                                <NavItem className="shop"> 
                                     <img src={logoshop}></img>
                                     <NavLink>
                                         <Link to='/shop/' className="hover">
@@ -50,7 +50,7 @@ const Menu: React.FC = () => {
                                 <NavItem className="user">
                                     <img src={logouser}></img>
                                     <NavLink>
-                                        <Link to='/user/' className="hover">
+                                        <Link to='/Products/' className="hover">
                                             My Profile
                                         </Link>
                                     </NavLink>

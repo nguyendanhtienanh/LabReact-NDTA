@@ -6,71 +6,121 @@
     width: 100%;
 }
 
-.header-shop {
-    height: 17%;
+.title-shop-row {
+    width: 405px;
+    height: 60px;
 }
 
-.title-header {
-    height: 49%;
-}
-.title-header >p {
+.title-shop-col {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
     align-items: center;
     color: #000000;
-    padding-left: 3%;
-
+    margin-left: 21px;
 }
 
-.content-header {
-    height: 51%;
-    display: flex;
+.header-shop-row {
+    height: 60px;
 }
 
-.link-header {
-    width: 70%;
+.link-shop-col {
+    height: 58px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
     align-items: center;
     color: #000000;
-    padding-left: 4%;
+    margin-left: 29px;
+    padding-top: 10px;
 }
 
-.search {
-    width: 30%;
+.search-col {
     display: flex;
-}
-
-.input-search {
-    height: 100%;
-    width: 80%;
-    display: flex;
-    box-sizing: border-box;
-}
-
-.input-search >Input {
+    width: 469px;
     position: relative;
-    background: #FFFFFF;
-    box-sizing: border-box;
-    border: 1px solid #000000;
+    margin-left: 80px;
 }
 
-.input-search >img {
-    width: 3%;
-    height: 6%;
+.search-col >img {
+    width: 49px;
+    height: 49px;
     position: absolute;
-    right: 6%;
-    padding-top: 0.4%;
-    padding-bottom: 0.1%;
+    left: 400px;
+    top: 5.5px;
 }
 
-.filter >img {
-    width: 100%;
-    height: 80%;
-    margin-top: 14%;
-    margin-left: 14%;
+.search-input {
+    width: 469px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    
+}
+
+.filter-col {
+    width: 58px;
+    height: 56.23px;
+}   
+
+
+.product {
+    display: flex;
+    margin-bottom: 92px;
+    margin-left: 24px;
+}
+
+.img {
+    width: 127px;
+    height: 137px;
+    margin-top: 30px;
+}
+
+.img-product {
+    width: 127px;
+    height: 137px;
+}
+
+.info-product {
+    margin-left: 25px;
+}
+
+.title-product {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    align-items: center;
+    color: #000000;
+    margin-top: 35px;
+}
+
+.price-product {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    align-items: center;
+    color: #000000;
+    margin-top: 7px;
+}
+
+.star-product {
+    width: 293px;
+    height: 61px;
+}
+
+.header-shop {
+    border-bottom: 1px solid black;
+}
+
+.link {
+    text-decoration: none;
+    color: #000000;
 }
