@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import './Menu.css';
-import { Navbar, Collapse, Nav, NavItem, NavLink, NavbarToggler, NavbarBrand,  } from "reactstrap";
+import { Navbar, Collapse, Nav, NavItem, NavbarToggler, NavbarBrand,  } from "reactstrap";
 import logoshop from '../img/logoshop.png';
 import logocart from '../img/logocart.png';
 import logouser from '../img/logouser.png';
@@ -32,28 +32,22 @@ const Menu: React.FC = () => {
                         <Collapse isOpen={sidebar} navbar>
                             <Nav navbar>
                                 <NavItem className="shop"> 
-                                    <img src={logoshop}></img>
-                                    <NavLink>
+                                    <img src={logoshop} alt=""></img>
                                         <Link to='/shop/' className="hover">
                                             Shop
                                         </Link>
-                                    </NavLink>
                                 </NavItem>
                                 <NavItem className="cart">
-                                    <img src={logocart}></img>
-                                    <NavLink>
+                                    <img src={logocart} alt=""></img>
                                         <Link to='/cart/' className="hover">
                                             Cart
                                         </Link>
-                                    </NavLink>
                                 </NavItem>
                                 <NavItem className="user">
-                                    <img src={logouser}></img>
-                                    <NavLink>
-                                        <Link to='/Products/' className="hover">
+                                    <img src={logouser} alt=""></img>
+                                        <Link to='/user/' className="hover">
                                             My Profile
                                         </Link>
-                                    </NavLink>
                                 </NavItem>
                             </Nav>
                         </Collapse>

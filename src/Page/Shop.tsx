@@ -35,16 +35,16 @@ const Shop: React.FC = () => {
                                     type="text"
                                     placeholder="Search ..."
                                 />
-                                <img src={iconsearch}></img>
+                                <img src={iconsearch} alt=""></img>
                             </Col>
                             <Col sm={1} className='filter-col'>
-                                <img src={iconfilter}></img>
+                                <img src={iconfilter} alt=""></img>
                             </Col>
                         </Row>
                     </Container>
                     <div className="data-shop">
                                 <Row>
-                                    {data.productData.map((item, index) => {
+                                    {data.productData.map((item) => {
                                         return(
                                             <Col sm={5} className='product'>
                                                     <Col sm={3}className="img">
@@ -52,7 +52,6 @@ const Shop: React.FC = () => {
                                                             className="img-product"
                                                             src={item.img}
                                                         />
-                                                        
                                                     </Col>
                                                     <Col sm={9} className='info-product'>
                                                         <CardTitle className="title-product">
@@ -61,7 +60,7 @@ const Shop: React.FC = () => {
                                                             </Link>
                                                         </CardTitle>
                                                         <CardText className="price-product">
-                                                            {item.price}
+                                                            {item.price} VND
                                                         </CardText>
                                                         <CardImg
                                                             className="star-product"

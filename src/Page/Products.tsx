@@ -1,14 +1,17 @@
-import React, {useState} from "react";
+import React from "react";
 import '../Page/Products.css';
 import TopHome from "../Components/TopHome";
 import Menu from "../Components/Menu";
 import { Link } from "react-router-dom";
 import iconcart from '../img/shopping-cart.png';
-import { Container, Row, Col, Card, Button, CardText, CardTitle, CardImg } from "reactstrap";
+import { Container, Row, Col} from "reactstrap";
 import data from "../Page/data";
-
+import ProductItem from "./ProductItem";
+import { useCart } from "react-use-cart";
 
 const Products: React.FC = () => {
+
+    const { totalItems } = useCart();
 
     return(
         <div className="Products">
@@ -30,8 +33,8 @@ const Products: React.FC = () => {
                                     / Product
                             </Col>
                             <Col sm={1} className="icon-cart">
-                                <img src={iconcart}></img>
-                                <span>0</span>
+                                <img src={iconcart} alt=""></img>
+                                <span>{totalItems}</span>
                             </Col>
                         </Row>
                     </Container>
@@ -39,46 +42,17 @@ const Products: React.FC = () => {
                         <Container>
                             {data.productData.map((item) => {
                                 return (
-                                    <Row>
-                                        <Col sm={4} className="img-product-data-row">
-                                            <CardImg 
-                                                className="img-product-data"
-                                                src={item.img}
-                                            ></CardImg>
-                                        </Col>
-                                        <Col sm={8} className="info-product-data-row">
-                                            <CardTitle className="info-product-data-name">
-                                                {item.name}
-                                            </CardTitle>
-                                            <CardText className="info-product-data-description">
-                                                {item.description}
-                                            </CardText>
-                                            <CardText className="info-product-data-price">
-                                                {item.price}
-                                            </CardText>
-                                            <CardImg
-                                                className="info-product-data-star"
-                                                src={item.star}
-                                            />
-                                            <div className="info-product-data-button">
-                                                <Link to='/cart'>
-                                                    <Button className="button-buy">
-                                                        Mua Ngay
-                                                    </Button>
-                                                </Link>
-                                                <Button className="button-addtocart">
-                                                    Thêm vào giỏ hàng
-                                                </Button>
-                                            </div>
-                                        </Col>
-                                        <Col>
-                                            <CardImg
-                                                className="info-product-data-more"
-                                                src={item.more}
-                                            />
-                                        </Col>
-                                    </Row>
-                                )
+                                    <ProductItem 
+                                        id={item.id}
+                                        img={item.img} 
+                                        name={item.name}
+                                        description={item.description}
+                                        price={item.price}
+                                        star={item.star}
+                                        more={item.more}
+                                        item={item}
+                                    />
+                                );
                             })}
                         </Container>
                     </div>
