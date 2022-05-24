@@ -7,13 +7,11 @@ import User from './Page/User';
 import Cart from './Page/Cart';
 import Shop from './Page/Shop';
 import Products from './Page/Products';
-import { CartProvider } from 'react-use-cart';
 
 const App: React.FC = () => {
 
   return(
     <div className='App'>
-      <CartProvider>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="Home" element={<Home />} />
@@ -22,7 +20,6 @@ const App: React.FC = () => {
           <Route path="User" element={<User />} />
           <Route path="Products" element={<Products />} />
         </Routes>
-      </CartProvider>
     </div>
   );
 }

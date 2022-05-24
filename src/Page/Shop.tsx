@@ -2,14 +2,17 @@ import React from "react";
 import '../Page/Shop.css';
 import TopHome from "../Components/TopHome";
 import Menu from "../Components/Menu";
-import { Input, Container, Row, Col, CardText, CardTitle, CardImg } from "reactstrap";
+import ItemShop from "./ItemShop";
+import { Input, Container, Row, Col } from "reactstrap";
 import iconsearch from '../img/iconsearch.png';
 import iconfilter from '../img/iconfilter.png';
 import { Link } from "react-router-dom";
-import data from '../Page/data';
+import { useAppSelector } from "../redux/hook";
+import { selectShop } from "../redux/shopSlice";
 
 const Shop: React.FC = () => {
 
+    const itemShop = useAppSelector(selectShop);
 
     return(
         <div className="Shop">
@@ -43,35 +46,18 @@ const Shop: React.FC = () => {
                         </Row>
                     </Container>
                     <div className="data-shop">
-                                <Row>
-                                    {data.productData.map((item) => {
-                                        return(
-                                            <Col sm={5} className='product'>
-                                                    <Col sm={3}className="img">
-                                                        <CardImg
-                                                            className="img-product"
-                                                            src={item.img}
-                                                        />
-                                                    </Col>
-                                                    <Col sm={9} className='info-product'>
-                                                        <CardTitle className="title-product">
-                                                            <Link to='/products/' className="link">
-                                                                {item.name}
-                                                            </Link>
-                                                        </CardTitle>
-                                                        <CardText className="price-product">
-                                                            {item.price} VND
-                                                        </CardText>
-                                                        <CardImg
-                                                            className="star-product"
-                                                            src={item.star}
-                                                        />
-                                                        
-                                                    </Col>
-                                            </Col>
-                                        )
-                                    })}
-                                </Row>
+                        {itemShop.map((item) => {
+                            return(
+                                <ItemShop
+                                    id={item.id}
+                                    img={item.img}
+                                    name={item.name}
+                                    description={item.description}
+                                    price={item.price}
+                                    star={item.star}
+                                />
+                            );
+                        })}
                     </div>
 
                 </div>

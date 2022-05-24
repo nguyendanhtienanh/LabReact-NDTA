@@ -5,13 +5,17 @@ import Menu from "../Components/Menu";
 import { Link } from "react-router-dom";
 import iconcart from '../img/shopping-cart.png';
 import { Container, Row, Col} from "reactstrap";
-import data from "../Page/data";
 import ProductItem from "./ProductItem";
-import { useCart } from "react-use-cart";
+import { useAppSelector } from "../redux/hook";
+import { selectProducts, selectShop } from "../redux/shopSlice";
+import { selectQuantity } from "../redux/productSlice";
+
+
 
 const Products: React.FC = () => {
 
-    const { totalItems } = useCart();
+    const itemProduct = useAppSelector(selectProducts)
+    const Quantity = useAppSelector(selectQuantity)
 
     return(
         <div className="Products">
@@ -34,23 +38,22 @@ const Products: React.FC = () => {
                             </Col>
                             <Col sm={1} className="icon-cart">
                                 <img src={iconcart} alt=""></img>
-                                <span>{totalItems}</span>
+                                <span>{Quantity}</span>
                             </Col>
                         </Row>
                     </Container>
                     <div className="data-shop">
                         <Container>
-                            {data.productData.map((item) => {
-                                return (
+                            {itemProduct.map((item) => {
+                                return(
                                     <ProductItem 
                                         id={item.id}
-                                        img={item.img} 
+                                        img={item.img}
                                         name={item.name}
                                         description={item.description}
                                         price={item.price}
                                         star={item.star}
                                         more={item.more}
-                                        item={item}
                                     />
                                 );
                             })}

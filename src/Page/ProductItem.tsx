@@ -2,17 +2,8 @@ import React from "react";
 import '../Page/ProductItem.css';
 import { Row, Col, Button, CardText, CardTitle, CardImg } from "reactstrap";
 import { Link } from "react-router-dom";
-import { useCart } from 'react-use-cart'
-
-interface item {
-    id: string;
-    img: string;
-    name: string;
-    description: string;
-    price: number;
-    star: string;
-    more: string;
-}
+import { addToCart } from '../redux/productSlice';
+import { useAppDispatch } from "../redux/hook";
 
 interface itemProductProps {
     id: string;
@@ -22,12 +13,22 @@ interface itemProductProps {
     price: number;
     star: string;
     more: string;
-    item: item;
 }
 
 const ProductItem: React.FC<itemProductProps> = (props) => {
 
-    const { addItem} = useCart ();
+    const dispatch = useAppDispatch();
+
+    const handleAddtoCart = () => {
+        dispatch(addToCart({
+            id: props.id,
+            img: props.img,
+            name: props.name,
+            description: props.description,
+            price: props.price,
+            total: 1
+        }))
+    }
 
     return(
         <div className="ProductItem">
@@ -54,11 +55,11 @@ const ProductItem: React.FC<itemProductProps> = (props) => {
                     />
                     <div className="info-product-data-button">
                         <Link to='/cart'>
-                            <Button className="button-buy">
+                            <Button className="button-buy" onClick={handleAddtoCart}>
                                 Mua Ngay
                             </Button>
                         </Link>
-                        <Button className="button-addtocart" onClick={() => addItem(props.item, 1)}>
+                        <Button className="button-addtocart" onClick={handleAddtoCart}>
                             Thêm vào giỏ hàng
                         </Button>
                     </div>
