@@ -2,8 +2,7 @@ import React from "react";
 import { Row, Col, CardText, CardTitle, CardImg, Button } from "reactstrap";
 import removebutton from "../img/remove-button.png";
 import '../Page/ItemCart.css';
-import { useAppSelector } from "../redux/hook";
-import { selectQuantity } from "../redux/productSlice";
+import { downItem, upItem } from "../redux/productSlice";
 import { useAppDispatch } from "../redux/hook";
 import { removeToCart } from '../redux/productSlice';
 
@@ -12,18 +11,34 @@ interface itemProductProps {
     img: string;
     name: string;
     description: string;
-    price: string;
-    total: number;
+    price: number;
+    quantity: number;
 }
 
 const ItemCart: React.FC<itemProductProps> = (props) => {
     const dispatch = useAppDispatch();
-    const Quantity = useAppSelector(selectQuantity)
 
     const handleRemove = () => {
         dispatch(removeToCart({
             id: props.id,
-            total: 1
+            price: props.price,
+            quantity: 1
+        }))
+    }
+
+    const hanldeUpItem = () => {
+        dispatch(upItem({
+            id: props.id,
+            price: props.price,
+            quantity: 1
+        }))
+    }
+
+    const handleDownItem = () => {
+        dispatch(downItem({
+            id: props.id,
+            price: props.price,
+            quantity: 1
         }))
     }
 
@@ -50,12 +65,14 @@ const ItemCart: React.FC<itemProductProps> = (props) => {
                 <Col sm={2} className="button-cart">
                     <Button 
                         className="button-cart-up"
+                        onClick={hanldeUpItem}
                     >
                         <span>+</span>
                     </Button>
-                    <CardText className="quantity-product"> <span>{props.total}</span> </CardText>
+                    <CardText className="quantity-product"> <span>{props.quantity}</span> </CardText>
                     <Button
                         className="button-cart-down"
+                        onClick={handleDownItem}
                     >
                         <span>-</span>
                     </Button>

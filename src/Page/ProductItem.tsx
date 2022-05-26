@@ -26,7 +26,7 @@ const ProductItem: React.FC<itemProductProps> = (props) => {
             name: props.name,
             description: props.description,
             price: props.price,
-            total: 1
+            quantity: 1
         }))
     }
 

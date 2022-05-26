@@ -24,30 +24,28 @@ const ItemShop: React.FC<itemShopProps> = (props) => {
 
     return (
         <div className="itemCart">
-            <Row>
-                <Col sm={5} className='product'>
-                    <Col sm={3}className="img">
+                <Col sm={5} className='productItemInDex'>
+                    <Col sm={3}className="imgShopItem">
                         <CardImg
-                            className="img-product"
+                            className="img-products"
                             src={props.img}
                         />
                     </Col>
-                    <Col sm={9} className='info-product'>
-                        <CardTitle className="title-product">
+                    <Col sm={9} className='info-products'>
+                        <CardTitle className="title-products">
                             <Link to='/products/' className="link" onClick={handleItemShop} >
                                 {props.name}
                             </Link>
                         </CardTitle>
-                        <CardText className="price-product">
+                        <CardText className="price-products">
                             {props.price} VND
                         </CardText>
                         <CardImg
-                            className="star-product"
+                            className="star-products"
                             src={props.star}
                         />
                     </Col>
                 </Col>
-            </Row>
         </div>
     )
 }

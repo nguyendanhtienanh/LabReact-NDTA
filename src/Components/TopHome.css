@@ -1,20 +1,18 @@
 .TopHome {
     height: 119px;
     background-color: #C6E5F4;
+    position: relative;
 }
 
 .home_logo {
-    margin-left: 37px;
-    margin-top: 10px;
+    position: absolute;
+    width: 115px;
     height: 86px;
-    width: 98px;
-
+    left: 37px;
+    top: 10px
 }
 
 .home_text {
-    margin: 30px 500px 23px 28px;
-    width:505px;
-    height: 66px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -22,17 +20,22 @@
     line-height: 56px;
     display: flex;
     align-items: center;
-    color: #000000;
-
+    position: absolute;
+    width: 505px;
+    height: 66px;
+    left: 163px;
+    top: 30px;
 }
 
 .logo_user {
-    margin-left: 12%;
+    position: absolute;
+    width: 90px;
+    height: 69px;
+    left: 1400px;
+    top: 27px;
 }
 
 .logo_user .fix-logouser >img {
-    margin-left: 75%;
     width: 69px;
     height: 69px;
-    margin-top: 24px;
 }

@@ -1,25 +1,25 @@
-.product {
+.productItemInDex {
     display: flex;
-    margin-bottom: 92px;
+    margin-bottom: 30px;
     margin-left: 24px;
 }
 
-.img {
+.imgShopItem {
     width: 127px;
     height: 137px;
     margin-top: 30px;
 }
 
-.img-product {
+.img-products {
     width: 127px;
     height: 137px;
 }
 
-.info-product {
+.info-products {
     margin-left: 25px;
 }
 
-.title-product {
+.title-products {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -29,7 +29,7 @@
     margin-top: 35px;
 }
 
-.price-product {
+.price-products {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -39,7 +39,7 @@
     margin-top: 7px;
 }
 
-.star-product {
+.star-products {
     width: 293px;
     height: 61px;
 }

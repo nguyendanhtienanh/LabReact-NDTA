@@ -7,7 +7,7 @@ import iconcart from '../img/shopping-cart.png';
 import { Container, Row, Col} from "reactstrap";
 import ProductItem from "./ProductItem";
 import { useAppSelector } from "../redux/hook";
-import { selectProducts, selectShop } from "../redux/shopSlice";
+import { selectProducts } from "../redux/shopSlice";
 import { selectQuantity } from "../redux/productSlice";
 
 
@@ -15,7 +15,7 @@ import { selectQuantity } from "../redux/productSlice";
 const Products: React.FC = () => {
 
     const itemProduct = useAppSelector(selectProducts)
-    const Quantity = useAppSelector(selectQuantity)
+    const quantity = useAppSelector(selectQuantity)
 
     return(
         <div className="Products">
@@ -38,7 +38,7 @@ const Products: React.FC = () => {
                             </Col>
                             <Col sm={1} className="icon-cart">
                                 <img src={iconcart} alt=""></img>
-                                <span>{Quantity}</span>
+                                <span>{quantity}</span>
                             </Col>
                         </Row>
                     </Container>

@@ -1,8 +1,8 @@
 .img-product-data {
-    width: 408px;
-    height: 478px;
-    margin-top: 46px;
-    margin-left: 32px;
+    width: 308px;
+    height: 378px;
+    margin-top: 16px;
+    margin-left: 60px;
 }
 
 .info-product-data-name {
@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     color: #000000;
-    margin-top: 46px;
+    margin-top: 26px;
     margin-left: 54px;
 }
 
@@ -30,7 +30,7 @@
     margin-top: 29px;
     margin-left: 54px;
     width: 690px;
-    height: 155px;
+    height: 110px;
 }
 
 .info-product-data-price{
@@ -47,19 +47,19 @@
 }
 
 .info-product-data-star{
-    width: 293px;
-    height: 61px;
+    width: 233px;
+    height: 51px;
     margin-left: 54px;  
 }
 
 .info-product-data-button {
-    margin-top: 29px;
+    margin-top: 9px;
     margin-left: 54px;
 }
 
 .button-buy {
-    width: 358px;
-    height: 103px;
+    width: 328px;
+    height: 83px;
     background: #00C2FF;
     border-radius: 10px;
     font-family: 'Roboto';
@@ -73,8 +73,8 @@
 }
 
 .button-addtocart{
-    width: 358px;
-    height: 103px;
+    width: 328px;
+    height: 83px;
     background: #00FF19;;
     border-radius: 10px;
     margin-left: 42px;
@@ -91,6 +91,5 @@
 .info-product-data-more{
     width: 198px;
     height: 107px;
-    margin-top: 36px;
     margin-left: 137px;
 }

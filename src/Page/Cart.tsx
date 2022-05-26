@@ -4,15 +4,17 @@ import Menu from "../Components/Menu";
 import { Container, Row, Col } from "reactstrap";
 import '../Page/Cart.css';
 import { useAppSelector } from "../redux/hook";
-import { selectProduct } from "../redux/productSlice";
+import { selectProduct, selectQuantity, selectSubTotal } from "../redux/productSlice";
 import ItemCart from '../Page/ItemCart';
-import { selectQuantity } from "../redux/productSlice";
 
 
 const Cart: React.FC = () => {
 
     const itemCart = useAppSelector(selectProduct)
-    const Quantity = useAppSelector(selectQuantity)
+    const SubTotal = useAppSelector(selectSubTotal)
+    const quantity = useAppSelector(selectQuantity)
+    const Tex = SubTotal * 10/100;
+    const Total = SubTotal - Tex;
 
     return(
         <div className="Cart">
@@ -28,7 +30,7 @@ const Cart: React.FC = () => {
                         </Row>
                         <Row className="header-cart-row">
                             <Col className="icon-cart">
-                                <p>{Quantity} Items in bag </p>
+                                <p> {quantity} Items in bag </p>
                             </Col>
                         </Row>
                     </Container>
@@ -42,10 +44,13 @@ const Cart: React.FC = () => {
                                         name={item.name}
                                         price={item.price}
                                         description={item.description}
-                                        total={item.total}
+                                        quantity={item.quantity}
                                     />
                                 );
                             })}
+                            <div className="subtotal"> SubTotal: {SubTotal} VND </div>
+                            <div className="tex"> Tex: {Tex} VND </div>
+                            <div className="total"> Total: {Total} VND </div>
                         </Container>
                     </div>
                 </div>
