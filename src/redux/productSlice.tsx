@@ -1,15 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "./store";
 
-const initialState = {
-    itemProduct: [{
-        id: '',
-        img: '',
-        name: '',
-        description: '',
-        price: 0,
-        quantity: 0,
-    }],
+export interface item {
+    id: string;
+    name: string;
+    img: string;
+    description: string;
+    price: number;
+    quantity: number;
+}
+
+export interface itemProduct {
+    itemProduct: item[];
+    subtotal: number;
+    quantity: number;
+}
+
+const initialState: itemProduct = {
+    itemProduct: [],
     subtotal: 0,
     quantity: 0
 } 
@@ -30,7 +38,7 @@ export const productSlice = createSlice({
         },
         removeToCart: (state, action) => {
             const removeItem = state.itemProduct.findIndex( (item) => item.id === action.payload.id);
-            if( removeItem ){
+            if( removeItem >= 0 ){
                 state.quantity = state.quantity - state.itemProduct[removeItem].quantity
                 state.subtotal = state.subtotal - (state.itemProduct[removeItem].price * state.itemProduct[removeItem].quantity) 
                 state.itemProduct = state.itemProduct.filter((item) => item.id !== action.payload.id)
@@ -38,7 +46,7 @@ export const productSlice = createSlice({
         },
         upItem: (state, action) => {
             const itemIndex = state.itemProduct.findIndex( (item) => item.id === action.payload.id);
-            if( itemIndex ){
+            if( itemIndex >= 0 ){
                 state.itemProduct[itemIndex].quantity += 1;
             }
             state.subtotal = state.subtotal + action.payload.price
@@ -47,7 +55,7 @@ export const productSlice = createSlice({
         downItem: (state, action) => {
             const itemIndex = state.itemProduct.findIndex( (item) => item.id === action.payload.id);
             const quantity = state.itemProduct[itemIndex].quantity;
-            if( itemIndex && quantity > 1){
+            if( itemIndex >= 0 && quantity > 1){
                 state.itemProduct[itemIndex].quantity -= 1;
             } else {
                 state.itemProduct = state.itemProduct.filter((item) => item.id !== action.payload.id)
